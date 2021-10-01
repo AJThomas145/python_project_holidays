@@ -17,7 +17,7 @@ CREATE TABLE attractions (
 create table theme_parks (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
-    recommended_attraction VARCHAR (255) REFERENCES attractions(id),
-    country VARCHAR (255) REFERENCES countries(id),
+    country_id INT REFERENCES countries(id),
+    attraction_id INT REFERENCES attractions(id),
     visted BOOLEAN
 );
