@@ -4,7 +4,7 @@ from models.theme_park import Theme_park
 class TestTheme_park(unittest.TestCase):
 
     def setUp(self):
-        self.theme_park = Theme_park("Walt Disney World", "Space Mountain", "USA")
+        self.theme_park = Theme_park("Walt Disney World", "USA", "Space Mountain")
 
 
     def test_theme_park_has_name(self):
@@ -13,7 +13,7 @@ class TestTheme_park(unittest.TestCase):
 
     def test_theme_park_has_attraction(self):
         self.assertEqual("Space Mountain", self.theme_park.attraction)
-        
+
 
     def test_theme_park_has_country(self):
         self.assertEqual("USA", self.theme_park.country)

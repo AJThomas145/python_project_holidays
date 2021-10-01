@@ -19,5 +19,5 @@ create table theme_parks (
     name VARCHAR (255),
     country_id INT REFERENCES countries(id),
     attraction_id INT REFERENCES attractions(id),
-    visted BOOLEAN
+    visited BOOLEAN
 );

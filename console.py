@@ -9,10 +9,13 @@ import repositories.theme_park_repository as theme_park_repository
 
 
 country1 = Country("USA", "North America")
+country_repository.save(country1)
 
 attraction1 = Attraction("Space Mountain", "Thrill Ride")
+attraction_repository.save(attraction1)
 
-theme_park1 = Theme_park("Walt Disney World", "Space Mountain", "USA")
+# theme_park1 = Theme_park('walt', attraction1, country1)
+# theme_park_repository.save(theme_park1)
 
 
 pdb.set_trace()
