@@ -46,7 +46,7 @@ def select (id):
     return attraction
 
 def update(attraction):
-    sql = "UPDATE attractions SET (name, category) = (%s, %s) WHERE ID = %s"
+    sql = "UPDATE attractions SET (name, category) = (%s, %s) WHERE id = %s"
     values = [attraction.name, attraction.category, attraction.id]
     run_sql(sql, values)
 
