@@ -11,3 +11,27 @@ def save(attraction):
     id = results[0]["id"]
     attraction.id = id
     return attraction
+
+
+def delete_all():
+    sql = "DELETE FROM attractions"
+    run_sql(sql)
+
+
+def delete(id):
+    sql = "DELETE FROM attractions where ID = %s"
+    values = [id]
+    run_sql(sql, values)
+
+
+def select_all():
+    attractions = []
+
+    sql = "SELECT * FROM attractions"
+    results = run_sql(sql)
+
+    for row in results:
+        attraction = Attraction(row["name"], ["category"], row["id"])
+        attractions.append(attraction)
+    return attractions
+

@@ -11,3 +11,7 @@ def save(country):
     id = results[0]["id"]
     country.id = id
     return country
+
+def delete_all():
+    sql = "DELETE FROM countries"
+    run_sql(sql)
