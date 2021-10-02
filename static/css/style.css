@@ -3,3 +3,22 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+body > div > h1 {
+    text-align: center;
+
+}
