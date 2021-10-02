@@ -35,3 +35,18 @@ def select_all():
         attractions.append(attraction)
     return attractions
 
+def select (id):
+    attraction = None
+    sql = "SELECT * FROM attractions WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        attraction = Attraction(result['name'], result['category'], result['id'])
+    return attraction
+
+def update(attraction):
+    sql = "UPDATE attractions SET (name, category) = (%s, %s) WHERE ID = %s"
+    values = [attraction.name, attraction.category, attraction.id]
+    run_sql(sql, values)
+
