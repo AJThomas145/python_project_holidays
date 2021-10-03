@@ -18,13 +18,17 @@ country_repository.save(country1)
 country2 = Country("Japan", "Asia")
 country_repository.save(country2)
 
+# country1 = Country("Germany", "Europe")
+# country_repository.update(country1)
+
 attraction1 = Attraction("Space Mountain", "Thrill Ride")
 attraction_repository.save(attraction1)
 
 attraction2 = Attraction("Air Grover", "Family ride")
 attraction_repository.save(attraction2)
 
-attraction3 = Attraction("Men in Black Alien Attack", "Thrill Ride")
+# attraction1 = Attraction("Men in Black Alien Attack", "Thrill Ride")
+# attraction_repository.update(attraction1)
 
 theme_park1 = Theme_park("Walt Disney World", country1, attraction1)
 theme_park_repository.save(theme_park1)
@@ -32,7 +36,7 @@ theme_park_repository.save(theme_park1)
 theme_park2 = Theme_park("Busch Gardens", country1, attraction2)
 theme_park_repository.save(theme_park2)
 
-theme_park2 = Theme_park("Universal Studios", country2, attraction3)
-theme_park_repository.update(theme_park2)
+# theme_park2 = Theme_park("Universal Studios", country2, attraction1)
+# theme_park_repository.update(theme_park2)
 
 pdb.set_trace()
