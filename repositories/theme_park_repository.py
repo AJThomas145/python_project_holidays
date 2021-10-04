@@ -49,6 +49,7 @@ def select(id):
     return theme_park
 
 def update(theme_park):
-    sql = "UPDATE theme_parks SET (name, country_id, attraction_id, visited) = (%s, %s, %s, %s) WHERE ID = %s"
+    sql = "UPDATE theme_parks SET (name, country_id, attraction_id, visited) = (%s, %s, %s, %s) WHERE id = %s"
     values = [theme_park.name, theme_park.country.id, theme_park.attraction.id, theme_park.visited, theme_park.id]
+    print(values)
     run_sql(sql, values)
