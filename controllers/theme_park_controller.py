@@ -38,3 +38,14 @@ def edit_theme_park(id):
     theme_park = theme_park_repository.select(id)
     countries = country_repository.select_all()
     return render_template("theme_parks/edit.html", countries = countries, theme_park=theme_park)
+
+@theme_parks_blueprint.route("/theme_parks/<id>/edit", methods=["POST"])
+def update_theme_park(id):
+    name = request.form["name"]
+    country_id = request.form["country_id"]
+    visited = request.form["visited"]
+    country = country_repository.select(country_id)
+    theme_park = Theme_park(name, country, visited, id)
+    theme_park_repository.update(theme_park)
+    return redirect("/theme_parks")
+
