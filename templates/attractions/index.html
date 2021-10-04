@@ -9,12 +9,16 @@
         <th>Name</th>
         <th></th>
         <th>Category</th>
+        <th></th>
+        <th>Theme Park</th>
     </tr>
     {% for attraction in attractions %}
     <tr>
         <td>{{attraction.name}} </a></td>
         <td>|</td>
         <td>{{ attraction.category }}</td>
+        <td>|</td>
+        <td>{{ attraction.theme_park.name }}</td>
 
     </tr>
     {% endfor %}
