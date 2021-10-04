@@ -7,8 +7,8 @@ import repositories.attraction_repository as attraction_repository
 import repositories.country_repository as country_repository
 
 def save(theme_park):
-    sql = "INSERT INTO theme_parks (name, country_id, attraction_id, visited) VALUES (%s, %s, %s, %s) RETURNING *"
-    values = [theme_park.name, theme_park.country.id, theme_park.attraction.id, theme_park.visited]
+    sql = "INSERT INTO theme_parks (name, country_id, visited) VALUES (%s, %s, %s) RETURNING *"
+    values = [theme_park.name, theme_park.country.id, theme_park.visited]
     results = run_sql(sql, values)
     id = results[0]["id"]
     theme_park.id = id
@@ -31,8 +31,7 @@ def select_all():
 
     for row in results:
         country = country_repository.select(row["country_id"])
-        attraction = attraction_repository.select(row["attraction_id"])
-        theme_park = Theme_park(row["name"], country, attraction, row["visited"], row["id"])
+        theme_park = Theme_park(row["name"], country, row["visited"], row["id"])
         theme_parks.append(theme_park)
     return theme_parks
 
@@ -44,12 +43,11 @@ def select(id):
 
     if result is not None:
         country = country_repository.select(result["country_id"])
-        attraction = attraction_repository.select(result["attraction_id"])
-        theme_park = Theme_park(result["name"], country, attraction, result["visited"], result["id"])
+        theme_park = Theme_park(result["name"], country, result["visited"], result["id"])
     return theme_park
 
 def update(theme_park):
-    sql = "UPDATE theme_parks SET (name, country_id, attraction_id, visited) = (%s, %s, %s, %s) WHERE id = %s"
-    values = [theme_park.name, theme_park.country.id, theme_park.attraction.id, theme_park.visited, theme_park.id]
+    sql = "UPDATE theme_parks SET (name, country_id, visited) = (%s, %s, %s) WHERE id = %s"
+    values = [theme_park.name, theme_park.country.id, theme_park.visited, theme_park.id]
     print(values)
     run_sql(sql, values)

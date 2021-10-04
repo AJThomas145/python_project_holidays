@@ -7,8 +7,8 @@ import repositories.attraction_repository as attraction_repository
 import repositories.country_repository as country_repository
 import repositories.theme_park_repository as theme_park_repository
 
-theme_park_repository.delete_all()
 attraction_repository.delete_all()
+theme_park_repository.delete_all()
 country_repository.delete_all()
 
 
@@ -18,26 +18,16 @@ country_repository.save(country1)
 country2 = Country("Japan", "Asia")
 country_repository.save(country2)
 
-# country1 = Country("Germany", "Europe")
-# country_repository.update(country1)
-
-attraction1 = Attraction("Space Mountain", "Thrill Ride")
-attraction_repository.save(attraction1)
-
-attraction2 = Attraction("Air Grover", "Family ride")
-attraction_repository.save(attraction2)
-
-# attraction1 = Attraction("Men in Black Alien Attack", "Thrill Ride")
-# # attraction_to_update = attraction_repository.save(attraction1)
-# attraction_repository.update(attraction_to_update)
-
-theme_park1 = Theme_park("Walt Disney World", country1, attraction1)
+theme_park1 = Theme_park("Walt Disney World", country1)
 theme_park_repository.save(theme_park1)
 
-theme_park2 = Theme_park("Busch Gardens", country1, attraction2)
+theme_park2 = Theme_park("Busch Gardens", country1)
 theme_park_repository.save(theme_park2)
 
-# theme_park2 = Theme_park("Universal Studios", country2, attraction1)
-# theme_park_repository.update(theme_park2)
+attraction1 = Attraction("Space Mountain", "Thrill Ride", theme_park1)
+attraction_repository.save(attraction1)
+
+attraction2 = Attraction("Air Grover", "Family ride", theme_park2)
+attraction_repository.save(attraction2)
 
 pdb.set_trace()

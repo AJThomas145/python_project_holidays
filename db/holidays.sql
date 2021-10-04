@@ -1,6 +1,7 @@
+DROP TABLE IF EXISTS attractions;
 DROP TABLE IF EXISTS theme_parks;
 DROP TABLE IF EXISTS countries;
-DROP TABLE IF EXISTS attractions;
+
 
 CREATE TABLE countries (
     id SERIAL PRIMARY KEY,
@@ -8,16 +9,16 @@ CREATE TABLE countries (
     continent VARCHAR (255)
 );
 
-CREATE TABLE attractions (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR (255),
-    category VARCHAR (255)
-);
-
 create table theme_parks (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
     country_id INT REFERENCES countries(id),
-    attraction_id INT REFERENCES attractions(id),
     visited BOOLEAN
 );
+CREATE TABLE attractions (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR (255),
+    category VARCHAR (255),
+    theme_park_id INT REFERENCES theme_parks(id)
+);
+
