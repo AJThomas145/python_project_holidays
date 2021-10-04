@@ -4,7 +4,7 @@
 
 <h1>Countries</h1>
 
-<table class="table">
+<table class="tablec">
     <tr>
         <th>Name</th>
         <th></th>
@@ -14,7 +14,11 @@
     <tr>
         <td>{{ country.name }} </a></td>
         <td>|</td>
-        <td>{{ country.continent }} <span class="editcountry"><a href="/countries/{{ country.id }}/edit">EDIT</a></span><span class="addcountry"><a href="/countries/new">ADD</span></td> 
+        <td>{{ country.continent }} </td>
+        <td>|</td>
+        <td><span class="editcountry"><a href="/countries/{{ country.id }}/edit">EDIT</a></span><span class="addcountry"><a href="/countries/new">ADD</span><span class="deletecountry"><form action="/countries/{{ country.id }}/delete" method="POST">
+        <input type="submit" value="delete"/></form> 
+        </td> 
 
     </tr>
     {% endfor %}

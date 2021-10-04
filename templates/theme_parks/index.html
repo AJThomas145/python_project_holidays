@@ -4,7 +4,7 @@
 
 <h1>Theme Parks</h1>
 
-<table class="table">
+<table class="tablet">
     <tr>
         <th>Name</th>
         <th></th>
@@ -22,7 +22,7 @@
         <td>|</td>
         <td>{{ theme_park.attraction.name}}</td>
         <td>|</td>
-        <td>{{ theme_park.visited }}</td>
+        <td><div class="visited">{{ theme_park.visited }} </div></td>
 
     </tr>
     {% endfor %}
