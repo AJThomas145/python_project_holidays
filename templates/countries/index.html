@@ -12,7 +12,7 @@
     </tr>
     {% for country in countries %}
     <tr>
-        <td><a href="/countries/{{ country.id }}/edit"> {{country.name}} </a></td>
+        <td>{{ country.name }} </a></td>
         <td>|</td>
         <td>{{ country.continent }} <span class="editcountry"><a href="/countries/{{ country.id }}/edit">EDIT</a></span></td> 
 

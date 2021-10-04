@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<form action="/countries{{country.id}}" method="post">
+<form action="/countries/{{country.id}}/edit" method="post">
     <div>
         <label for="Name">Name</label>
-        <input type="text" id="name" name="name" value="{{ country.name }}" required autofocus>
+        <input type="text" id="name" name="name" value="{{ country.name }}" required autofocus oninput="this.value = this.value.toUpperCase()"/>
     </div>
     <div>
         <label for="continent">Continent</label>
-        <input type="text" id="continent" name="continent" value="{{ country.continent }}" required>
+        <input type="text" id="continent" name="continent" value="{{ country.continent }}" required oninput="this.value = this.value.toUpperCase()"/>
     </div>
 
     <button type="submit">Update Country</button>
