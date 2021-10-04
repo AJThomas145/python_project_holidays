@@ -49,3 +49,7 @@ def update_theme_park(id):
     theme_park_repository.update(theme_park)
     return redirect("/theme_parks")
 
+@theme_parks_blueprint.route("/theme_parks/<id>/delete", methods=["POST"])
+def theme_park_delete(id):
+    theme_park_repository.delete(id)
+    return redirect("/theme_parks")

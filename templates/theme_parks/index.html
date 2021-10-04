@@ -20,10 +20,12 @@
         <td>|</td>
         <td><div class="visited">{{ theme_park.visited }} </div></td>
         <td>|</td>
-        <td><span class="edittheme"><a href="/theme_parks/{{ theme_park.id }}/edit">EDIT</a></span></td>
+        <td><span class="editthemepark"><a href="/theme_parks/{{ theme_park.id }}/edit">EDIT</a></span></td>
         <td>|</td>
         <td><span class="addthemepark"><a href="/theme_parks/new">ADD</span><td>
         <td>|</td> 
+        <td><span class="delethemepark"><form action="/theme_parks/{{ theme_park.id }}/delete" method="POST">
+            <input type="submit" value="delete"/></form></td> 
 
     </tr>
     {% endfor %}
