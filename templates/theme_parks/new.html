@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/countries" method="POST">
+    <div>
+        <label for="name">Country Name:</label>
+        <input type="text" id="name" name="name" required autofocus>
+    </div>
+
+    <div>
+        <label for="continent">Continent:</label>
+        <input type="text" id="continent" name="continent" required>
+    </div>
+
+    
+    <button type="submit">Add Country</button>
+</form>
+
+<form action="/theme_parks" method="POST">
+    <div>
+        <label for="name">Theme_Park Name:</label>
+        <input type="text" id="name" name="name" required autofocus>
+    </div>
+
+    <div>
+        <label for="country">Country name:</label>
+        <input type="text" id="country" name="country" required>
+        
+    </div>
+    <div>
+        <label for="attraction">Attraction name:</label>
+        <input type="text" id="attraction" name="attraction" required>
+    </div>
+    <div>
+        <label for="visited">Visited:</label>
+        <select id="visited" name="visited">
+            <option value="true">True</option>
+            <option value="false">False</option>
+    </div>
+
+    <button type="submit">Add Theme Park</button>
+</form>
+{% endblock %}
