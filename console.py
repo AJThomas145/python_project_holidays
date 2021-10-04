@@ -27,7 +27,7 @@ theme_park_repository.save(theme_park2)
 attraction1 = Attraction("Space Mountain", "Thrill Ride", theme_park1)
 attraction_repository.save(attraction1)
 
-attraction2 = Attraction("Air Grover", "Family ride", theme_park2)
+attraction2 = Attraction("Air Grover", "Family ride", theme_park1)
 attraction_repository.save(attraction2)
 
 pdb.set_trace()

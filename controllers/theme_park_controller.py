@@ -17,6 +17,7 @@ def theme_parks():
     theme_parks = theme_park_repository.select_all()
     return render_template("theme_parks/index.html", theme_parks = theme_parks)
 
+
 @theme_parks_blueprint.route("/theme_parks/new")
 def new_theme_park():
     countries = country_repository.select_all()

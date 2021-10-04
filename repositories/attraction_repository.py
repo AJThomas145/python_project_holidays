@@ -55,3 +55,11 @@ def update(attraction):
     print(values)
     run_sql(sql, values)
 
+def attractions_by_theme_park_id(id):
+    attractions = []
+    sql = "SELECT * FROM attractions WHERE theme_park_id = %s"
+    values = [id]
+    result = run_sql(sql, values)
+    attractions.append(result)
+    return attractions
+

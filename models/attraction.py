@@ -5,3 +5,5 @@ class Attraction:
         self.category = category
         self.theme_park = theme_park
         self.id = id
+
+    
