@@ -31,7 +31,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        attraction = Attraction(row["name"], ["category"], row["id"])
+        attraction = Attraction(row["name"], row["category"], row["id"])
         attractions.append(attraction)
     return attractions
 

@@ -27,9 +27,9 @@ attraction_repository.save(attraction1)
 attraction2 = Attraction("Air Grover", "Family ride")
 attraction_repository.save(attraction2)
 
-attraction1 = Attraction("Men in Black Alien Attack", "Thrill Ride")
-# attraction_to_update = attraction_repository.save(attraction1)
-attraction_repository.update(attraction_to_update)
+# attraction1 = Attraction("Men in Black Alien Attack", "Thrill Ride")
+# # attraction_to_update = attraction_repository.save(attraction1)
+# attraction_repository.update(attraction_to_update)
 
 theme_park1 = Theme_park("Walt Disney World", country1, attraction1)
 theme_park_repository.save(theme_park1)

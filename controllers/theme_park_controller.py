@@ -15,3 +15,16 @@ def Home():
 def theme_parks():
     theme_parks = theme_park_repository.select_all()
     return render_template("theme_parks/index.html", theme_parks = theme_parks)
+
+# @countries_blueprint.route("/countries/new")
+# def new_country():
+#     countries = country_repository.select_all()
+#     return render_template("countries/new.html", countries=countries)
+
+# @countries_blueprint.route("/countries", methods=["POST"])
+# def create_country():
+#     name = request.form["name"]
+#     continent = request.form["continent"]
+#     country = Country(name, continent)
+#     country_repository.save(country)
+#     return redirect("/countries")

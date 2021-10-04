@@ -4,15 +4,15 @@
 
 <h1>Attractions</h1>
 
-<table class="table">
+<table class="tablea">
     <tr>
         <th>Name</th>
         <th></th>
         <th>Category</th>
     </tr>
-    {% for country in countries %}
+    {% for attraction in attractions %}
     <tr>
-        <td><a href="/attractions/{{ attraction.id }}"> {{attraction.name}} </a></td>
+        <td>{{attraction.name}} </a></td>
         <td>|</td>
         <td>{{ attraction.category }}</td>
 
