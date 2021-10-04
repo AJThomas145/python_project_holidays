@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/theme_parks/{{theme_park.id}}/edit" method="post">
+    <div>
+        <label for="Name">Name</label>
+        <input type="text" id="name" name="name" value="{{ theme_park.name }}" required autofocus oninput="this.value = this.value.toUpperCase()"/>
+    </div>
+    <div>
+        <label for="country">Country:</label>
+        <select id="country" name="country_id">
+            {% for country in countries %}
+            <option value= "{{ country.id }}"
+            {% if theme_park.country.id == country.id %} selected="selected"{% endif %}>
+            {{country.name }}
+            </option>
+            {% endfor %}
+        </select>
+        
+    </div>
+    <div>
+        <label for="visited">Visited:</label>
+        <select id="visited" name="visited">
+    
+          <option value="true"
+            {% if theme_park.visited == True %} selected="selected" {% endif %}>
+            True
+          </option>
+    
+          <option value="false"
+            {% if theme_park.visited == False %} selected="selected" {% endif %}>
+            False
+          </option>
+    
+        </select>
+      </div>
+
+
+    <button type="submit">Update Country</button>
+
+</form>
+
+{% endblock %}

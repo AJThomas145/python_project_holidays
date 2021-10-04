@@ -32,3 +32,9 @@ def create_theme_park():
     theme_park = Theme_park(name, country, visited)
     theme_park_repository.save(theme_park)
     return redirect("/theme_parks")
+
+@theme_parks_blueprint.route("/theme_parks/<id>/edit")
+def edit_theme_park(id):
+    theme_park = theme_park_repository.select(id)
+    countries = country_repository.select_all()
+    return render_template("theme_parks/edit.html", countries = countries, theme_park=theme_park)
