@@ -10,8 +10,6 @@
         <th></th>
         <th>Country</th>
         <th></th>
-        <th>Attraction</th>
-        <th></th>
         <th>Visited</th>
     </tr>
     {% for theme_park in theme_parks %}
@@ -19,8 +17,6 @@
         <td>{{ theme_park.name }}</td>
         <td>|</td>
         <td>{{ theme_park.country.name }}</td>
-        <td>|</td>
-        <td>{{ theme_park.attraction.name}}</td>
         <td>|</td>
         <td><div class="visited">{{ theme_park.visited }} </div></td>
         <td>|</td>

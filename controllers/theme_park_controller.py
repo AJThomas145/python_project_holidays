@@ -20,18 +20,15 @@ def theme_parks():
 @theme_parks_blueprint.route("/theme_parks/new")
 def new_theme_park():
     countries = country_repository.select_all()
-    attractions = attraction_repository.select_all()
     theme_parks = theme_park_repository.select_all()
-    return render_template("theme_parks/new.html", countries = countries, attractions = attractions, theme_parks = theme_parks)
+    return render_template("theme_parks/new.html", countries = countries, theme_parks = theme_parks)
 
 @theme_parks_blueprint.route("/theme_parks", methods=["POST"])
 def create_theme_park():
     name = request.form["name"]
     country_id = request.form["country_id"]
-    attraction_id = request.form["attraction_id"]
     visited = request.form["visited"]
     country = country_repository.select(country_id)
-    attraction = attraction_repository.select(attraction_id)
-    theme_park = Theme_park(name, country, attraction, visited)
+    theme_park = Theme_park(name, country, visited)
     theme_park_repository.save(theme_park)
     return redirect("/theme_parks")
