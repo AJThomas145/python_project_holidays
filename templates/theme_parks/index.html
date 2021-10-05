@@ -11,7 +11,9 @@
         <th>Country</th>
         <th></th>
         <th>Visited</th>
-        <th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+        <th></th>
+        <th><a href="/theme_parks/new" style="color:greenyellow">ADD</a></th>
+        <th></th>
     </tr>
     {% for theme_park in theme_parks %}
 
@@ -30,10 +32,8 @@
         <!-- <td>|</td> -->
         <td><span class="editthemepark"><a href="/theme_parks/{{ theme_park.id }}/edit">EDIT</a></span></td>
         <td>|</td>
-        <td><span class="addthemepark"><a href="/theme_parks/new">ADD</span><td>
-        <td>|</td> 
         <td><span class="delethemepark"><form action="/theme_parks/{{ theme_park.id }}/delete" method="POST">
-            <input type="submit" value="delete"/></form></td> 
+        <input type="submit" value="delete"/></form></td> 
 
     </tr>
     {% endfor %}
