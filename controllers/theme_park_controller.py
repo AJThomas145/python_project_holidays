@@ -73,13 +73,11 @@ def theme_park_not_visited():
 
 @theme_parks_blueprint.route("/search")
 def search():
-    countries = country_repository.select_all()
-    theme_parks = theme_park_repository.select_all()
-    attraction = attraction_repository.select_all()
-    return render_template("/search.html", countries=countries, theme_parks=theme_parks, attraction=attraction)
+    return render_template("/search.html")
 
-# @theme_parks_blueprint.route("search", methods=["POST"])
+# @theme_parks_blueprint.route("/search", methods=["POST"])
 # def search():
+#     search_term = 
 #    return render_template("/search.html", countries=countries, theme_parks=theme_parks, attraction=attraction)
 
 

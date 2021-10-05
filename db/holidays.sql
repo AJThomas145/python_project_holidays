@@ -12,13 +12,13 @@ CREATE TABLE countries (
 create table theme_parks (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
-    country_id INT REFERENCES countries(id),
+    country_id INT REFERENCES countries(id) ON DELETE CASCADE,
     visited BOOLEAN
 );
 CREATE TABLE attractions (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
     category VARCHAR (255),
-    theme_park_id INT REFERENCES theme_parks(id)
+    theme_park_id INT REFERENCES theme_parks(id) ON DELETE CASCADE
 );
 
