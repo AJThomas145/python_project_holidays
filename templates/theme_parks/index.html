@@ -14,10 +14,10 @@
         <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
     </tr>
     {% for theme_park in theme_parks %}
-    
+
     <tr>
-        <td>{{ theme_park.name }}</td>
-        <!-- <td><a href="/attraction/{{ attraction.theme_park.id }}"> {{ theme_park.name }}</td> -->
+        <!-- <td>{{ theme_park.name }}</td> -->
+        <td><a href="/theme_parks/{{ theme_park.id }}"> {{ theme_park.name }}</a></td>
         <td>|</td>
         <td>{{ theme_park.country.name }}</td>
         <td>|</td>

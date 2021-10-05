@@ -15,7 +15,8 @@ def Home():
 @theme_parks_blueprint.route("/theme_parks")
 def theme_parks():
     theme_parks = theme_park_repository.select_all()
-    return render_template("theme_parks/index.html", theme_parks = theme_parks)
+    attractions = attraction_repository.select_all()
+    return render_template("theme_parks/index.html", theme_parks = theme_parks, attractions = attractions)
 
 
 @theme_parks_blueprint.route("/theme_parks/new")
@@ -54,3 +55,11 @@ def update_theme_park(id):
 def theme_park_delete(id):
     theme_park_repository.delete(id)
     return redirect("/theme_parks")
+
+@theme_parks_blueprint.route("/theme_parks/<id>")
+def attractions_by_theme_park(id):
+    attractions = attraction_repository.attractions_by_theme_park_id(id)
+    return render_template("/theme_parks/attractions.html", attractions=attractions)
+
+
+

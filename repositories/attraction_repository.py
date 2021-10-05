@@ -59,7 +59,10 @@ def attractions_by_theme_park_id(id):
     attractions = []
     sql = "SELECT * FROM attractions WHERE theme_park_id = %s"
     values = [id]
-    result = run_sql(sql, values)
-    attractions.append(result)
+    results = run_sql(sql, values)
+    
+    for row in results:
+        attraction = Attraction(row["name"], row["category"], row["theme_park_id"], row["id"])
+        attractions.append(attraction)
     return attractions
 

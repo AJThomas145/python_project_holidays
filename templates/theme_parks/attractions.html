@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Attractions</h1>
+
+<table class="tablea">
+    <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Category</th>
+    </tr>
+    {% for attraction in attractions %}
+    <tr>
+        <td>{{ attraction.name }} </a></td>
+        <td>|</td>
+        <td>{{ attraction.category }}</td>
+        
+    </tr>
+    {% endfor %}
+</table>
+
+</div>
+
+{% endblock %}
