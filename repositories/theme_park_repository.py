@@ -51,3 +51,25 @@ def update(theme_park):
     values = [theme_park.name, theme_park.country.id, theme_park.visited, theme_park.id]
     print(values)
     run_sql(sql, values)
+
+def theme_park_not_visited():
+    visited = []
+    theme_parks = select_all()
+    for park in theme_parks:
+        if park.visited == False:
+           visited.append(park)
+    return visited
+
+def theme_park_visited():
+    visited = []
+    theme_parks = select_all()
+    for park in theme_parks:
+        if park.visited == True:
+           visited.append(park)
+    return visited
+
+
+    
+       
+
+

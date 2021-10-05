@@ -61,5 +61,9 @@ def attractions_by_theme_park(id):
     attractions = attraction_repository.attractions_by_theme_park_id(id)
     return render_template("/theme_parks/attractions.html", attractions=attractions)
 
+@theme_parks_blueprint.route("/theme_parks/visited")
+def theme_park_visited():
+    theme_parks = theme_park_repository.theme_park_visited()
+    return render_template("/theme_parks/visited.html", theme_parks=theme_parks)
 
 

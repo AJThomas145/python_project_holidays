@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Theme Park Wish List</h1>
+
+<table class="tablewish">
+    <tr>
+        <th>Name</th>
+        <th></th>
+        <th>Country</th>
+        
+    </tr>
+    {% for theme_park in theme_parks %}
+
+    <tr>
+        <td>{{ theme_park.name }}</a></td>
+        <td>|</td>
+        <td>{{ theme_park.country.name }}</td>
+        
+    </tr>
+    {% endfor %}
+</table>
+
+</div>
+
+{% endblock %}
