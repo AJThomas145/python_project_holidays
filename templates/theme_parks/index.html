@@ -18,12 +18,10 @@
     {% for theme_park in theme_parks %}
 
     <tr>
-        <!-- <td>{{ theme_park.name }}</td> -->
         <td><a href="/theme_parks/{{ theme_park.id }}"> {{ theme_park.name }}</a></td>
         <td>|</td>
         <td>{{ theme_park.country.name }}</td>
         <td>|</td>
-        <!-- <td><div class="visited">{{ theme_park.visited }} </div></td> -->
         <td>{% if theme_park.visited == True %}
           <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
         {% else %}

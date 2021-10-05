@@ -1,7 +1,6 @@
 .tablecountries {
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.9em;
     min-width: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -40,7 +39,6 @@
 .tablethemepark{
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.9em;
     min-width: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -75,7 +73,6 @@
 .tablethemeattractions {
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.9em;
     min-width: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -110,7 +107,6 @@
 .tablevisited {
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.9em;
     min-width: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -145,7 +141,6 @@
 .tablewish {
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.9em;
     min-width: 300px;
     margin-left: auto;
     margin-right: auto;
