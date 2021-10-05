@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<div class="form-center">
 <form action="/attractions" method="POST">
     <div>
         <label for="name">Attraction Name:</label>
@@ -24,5 +26,6 @@
             
     <button type="submit">Add Attraction</button>
 </form>
+</div>
 
 {% endblock %}

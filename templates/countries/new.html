@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form action="/countries" method="POST">
+
+<div class="form-center">
+    <form action="/countries" method="POST">
     <div>
         <label for="name">Country Name:</label>
         <input type="text" id="name" name="name" required autofocus>
@@ -15,6 +17,7 @@
     
     <button type="submit">Add Country</button>
 </form>
+</div>
 
 {% endblock %}
 

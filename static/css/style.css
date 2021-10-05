@@ -30,3 +30,8 @@ body > div > h1 {
 .attraction_add {
     color: white;
 }
+
+.form-center {
+    display: flex;
+    justify-content:center;
+}

@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<div class="form-center">
+
 <form action="/theme_parks" method="POST">
     <div>
         <label for="name">Theme Park Name:</label>
@@ -28,6 +31,6 @@
     
     <button type="submit">Add Theme Park</button>
 </form>
-
+</div>
 {% endblock %}
 

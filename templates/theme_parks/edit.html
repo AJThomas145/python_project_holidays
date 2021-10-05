@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<div class="form-center">
+
 <form action="/theme_parks/{{theme_park.id}}/edit" method="post">
     <div>
         <label for="Name">Name</label>
@@ -40,5 +42,5 @@
     <button type="submit">Update Theme Park</button>
 
 </form>
-
+</div>
 {% endblock %}
