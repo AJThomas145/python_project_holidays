@@ -66,4 +66,9 @@ def theme_park_visited():
     theme_parks = theme_park_repository.theme_park_visited()
     return render_template("/theme_parks/visited.html", theme_parks=theme_parks)
 
+@theme_parks_blueprint.route("/theme_parks/wish_list")
+def theme_park_not_visited():
+    theme_parks = theme_park_repository.theme_park_not_visited()
+    return render_template("/theme_parks/wish_list.html", theme_parks=theme_parks)
+
 
