@@ -11,7 +11,7 @@
         <th>Country</th>
         <th></th>
         <th>Visited</th>
-        <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+        <th></th><th></th><th></th><th></th><th></th><th></th><th></th>
     </tr>
     {% for theme_park in theme_parks %}
 
@@ -21,8 +21,13 @@
         <td>|</td>
         <td>{{ theme_park.country.name }}</td>
         <td>|</td>
-        <td><div class="visited">{{ theme_park.visited }} </div></td>
-        <td>|</td>
+        <!-- <td><div class="visited">{{ theme_park.visited }} </div></td> -->
+        <td>{% if theme_park.visited == True %}
+          <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+        {% else %}
+          <i class="fa fa-times fa-2x" style="color: red" aria-hidden="true"></i>
+        {% endif %}</td>
+        <!-- <td>|</td> -->
         <td><span class="editthemepark"><a href="/theme_parks/{{ theme_park.id }}/edit">EDIT</a></span></td>
         <td>|</td>
         <td><span class="addthemepark"><a href="/theme_parks/new">ADD</span><td>
