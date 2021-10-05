@@ -4,7 +4,7 @@
 
 <h1>Attractions</h1>
 
-<table class="tableattractions">
+<table class="tablethemeattractions">
     <tr>
         <th>Name</th>
         <th></th>
@@ -15,6 +15,12 @@
         <td>{{ attraction.name }} </a></td>
         <td>|</td>
         <td>{{ attraction.category }}</td>
+        <td>|</td>
+        <td><a href="/attractions/{{attraction.id}}/edit">EDIT</a></td>
+        <td>|</td>
+        <td><a href="/attractions/new">ADD</span><td>
+
+            
         
     </tr>
     {% endfor %}

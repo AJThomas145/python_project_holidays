@@ -70,7 +70,7 @@
 
 }
 
-.tableattractions {
+.tablethemeattractions {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
@@ -80,26 +80,26 @@
 
 }
 
-.tableattractions tr th {
+.tablethemeattractions tr th {
     background-color: blue;
     color: white;
     text-align: left;
     font-weight: bold
 }
 
-.tableattractions tr {
+.tablethemeattractions tr {
     background-color: white;
     color: black;
     text-align: left;
     font-weight: bold
 }
 
-.tableattractions th,
-.tableattractions td {
+.tablethemeattractions th,
+.tablethemeattractions td {
     padding: 12px 15px;
 }
 
-.tableattractions tr {
+.tablethemeattractions tr {
     border-bottom: 1px solid black;
 
 }
