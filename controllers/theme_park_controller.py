@@ -75,9 +75,6 @@ def theme_park_not_visited():
 def search():
     return render_template("/search.html")
 
-# @theme_parks_blueprint.route("/search", methods=["POST"])
-# def search():
-#     search_term = 
-#    return render_template("/search.html", countries=countries, theme_parks=theme_parks, attraction=attraction)
+
 
 

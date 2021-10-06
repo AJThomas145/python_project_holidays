@@ -6,11 +6,11 @@
 
 <table class="tablethemepark">
     <tr>
-        <th>Name</th>
+        <th>NAME</th>
         <th></th>
-        <th>Country</th>
+        <th>COUNTRY</th>
         <th></th>
-        <th>Visited</th>
+        <th>VISITED</th>
         <th></th><th></th>
         <th><a href="/theme_parks/new" style="color:WHITE">ADD</a></th>
         <th></th>
@@ -31,7 +31,7 @@
         <td><span class="editthemepark"><a href="/theme_parks/{{ theme_park.id }}/edit">EDIT</a></span></td>
         <td>|</td>
         <td><span class="delethemepark"><form action="/theme_parks/{{ theme_park.id }}/delete" method="POST">
-        <input type="submit" value="delete"/></form></td> 
+        <input type="submit" value="DELETE"/></form></td> 
 
     </tr>
     {% endfor %}
