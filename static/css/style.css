@@ -37,9 +37,6 @@ body > div > p {
     font-weight: bold;
     position:relative; top: 22px;
 }
-/* .attraction_add {
-    color: white;
-} */
 
 .form-center {
     display: flex;
